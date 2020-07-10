@@ -73,9 +73,9 @@ namespace BSAF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IOM_Logo {
+        internal static System.Drawing.Bitmap iconfinder_user_add_216490 {
             get {
-                object obj = ResourceManager.GetObject("IOM_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("iconfinder_user-add_216490", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace BSAF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap password {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("password", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace BSAF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap password {
+        internal static System.Drawing.Bitmap Untitled1 {
             get {
-                object obj = ResourceManager.GetObject("password", resourceCulture);
+                object obj = ResourceManager.GetObject("Untitled1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

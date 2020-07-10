@@ -5,6 +5,7 @@ namespace BSAF.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using BSAF.Models.Tables;
+    using SQLite.CodeFirst;
 
     public partial class dbContext : DbContext
     {
@@ -12,10 +13,6 @@ namespace BSAF.Entity
             : base("name=BSAFconn")
         {
         }
-        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Beneficiary> Beneficiaries { get; set; }
         public virtual DbSet<BenefitedFromOrg> BenefitedFromOrgs { get; set; }
         public virtual DbSet<BorderCrossingPoint> BorderCrossingPoints { get; set; }
@@ -37,9 +34,12 @@ namespace BSAF.Entity
         public virtual DbSet<PSN> PSNs { get; set; }
         public virtual DbSet<Transportation> Transportations { get; set; }
         public virtual DbSet<ReturnReason> ReturnReasons { get; set; }
+        public virtual DbSet<UserSettings> UserSettings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            var sqliteConnectionInitializer = new SqliteCreateDatabaseIfNotExists<dbContext>(modelBuilder);
+            Database.SetInitializer(sqliteConnectionInitializer);
         }
     }
 }

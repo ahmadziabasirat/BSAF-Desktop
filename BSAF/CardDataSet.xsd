@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CardDataSet" targetNamespace="http://tempuri.org/CardDataSet.xsd" xmlns:mstns="http://tempuri.org/CardDataSet.xsd" xmlns="http://tempuri.org/CardDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CardDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CardDataSet" msprop:Generator_UserDSName="CardDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CardInfo" msprop:Generator_TableClassName="CardInfoDataTable" msprop:Generator_TableVarName="tableCardInfo" msprop:Generator_TablePropName="CardInfo" msprop:Generator_RowDeletingName="CardInfoRowDeleting" msprop:Generator_RowChangingName="CardInfoRowChanging" msprop:Generator_RowEvHandlerName="CardInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="CardInfoRowDeleted" msprop:Generator_UserTableName="CardInfo" msprop:Generator_RowChangedName="CardInfoRowChanged" msprop:Generator_RowEvArgName="CardInfoRowChangeEvent" msprop:Generator_RowClassName="CardInfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalName" msprop:Generator_ColumnVarNameInTable="columnLocalName" msprop:Generator_ColumnPropNameInRow="LocalName" msprop:Generator_ColumnPropNameInTable="LocalNameColumn" msprop:Generator_UserColumnName="LocalName" type="xs:string" minOccurs="0" />
+              <xs:element name="FatherName" msprop:Generator_ColumnVarNameInTable="columnFatherName" msprop:Generator_ColumnPropNameInRow="FatherName" msprop:Generator_ColumnPropNameInTable="FatherNameColumn" msprop:Generator_UserColumnName="FatherName" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalFatherName" msprop:Generator_ColumnVarNameInTable="columnLocalFatherName" msprop:Generator_ColumnPropNameInRow="LocalFatherName" msprop:Generator_ColumnPropNameInTable="LocalFatherNameColumn" msprop:Generator_UserColumnName="LocalFatherName" type="xs:string" minOccurs="0" />
+              <xs:element name="BCP" msprop:Generator_ColumnVarNameInTable="columnBCP" msprop:Generator_ColumnPropNameInRow="BCP" msprop:Generator_ColumnPropNameInTable="BCPColumn" msprop:Generator_UserColumnName="BCP" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalBCP" msprop:Generator_ColumnVarNameInTable="columnLocalBCP" msprop:Generator_ColumnPropNameInRow="LocalBCP" msprop:Generator_ColumnPropNameInTable="LocalBCPColumn" msprop:Generator_UserColumnName="LocalBCP" type="xs:string" minOccurs="0" />
+              <xs:element name="ReturnStatus" msprop:Generator_ColumnVarNameInTable="columnReturnStatus" msprop:Generator_ColumnPropNameInRow="ReturnStatus" msprop:Generator_ColumnPropNameInTable="ReturnStatusColumn" msprop:Generator_UserColumnName="ReturnStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalReturnStatus" msprop:Generator_ColumnVarNameInTable="columnLocalReturnStatus" msprop:Generator_ColumnPropNameInRow="LocalReturnStatus" msprop:Generator_ColumnPropNameInTable="LocalReturnStatusColumn" msprop:Generator_UserColumnName="LocalReturnStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="FamilySize" msprop:Generator_ColumnVarNameInTable="columnFamilySize" msprop:Generator_ColumnPropNameInRow="FamilySize" msprop:Generator_ColumnPropNameInTable="FamilySizeColumn" msprop:Generator_UserColumnName="FamilySize" type="xs:int" minOccurs="0" />
+              <xs:element name="ReturnAddress" msprop:Generator_ColumnVarNameInTable="columnReturnAddress" msprop:Generator_ColumnPropNameInRow="ReturnAddress" msprop:Generator_ColumnPropNameInTable="ReturnAddressColumn" msprop:Generator_UserColumnName="ReturnAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="CardID" msprop:Generator_ColumnVarNameInTable="columnCardID" msprop:Generator_ColumnPropNameInRow="CardID" msprop:Generator_ColumnPropNameInTable="CardIDColumn" msprop:Generator_UserColumnName="CardID" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalReturnAddress" msprop:Generator_ColumnVarNameInTable="columnLocalReturnAddress" msprop:Generator_ColumnPropNameInRow="LocalReturnAddress" msprop:Generator_ColumnPropNameInTable="LocalReturnAddressColumn" msprop:Generator_UserColumnName="LocalReturnAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="ReturnDate" msprop:Generator_ColumnVarNameInTable="columnReturnDate" msprop:Generator_ColumnPropNameInRow="ReturnDate" msprop:Generator_ColumnPropNameInTable="ReturnDateColumn" msprop:Generator_UserColumnName="ReturnDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Photo" msprop:Generator_ColumnVarNameInTable="columnPhoto" msprop:Generator_ColumnPropNameInRow="Photo" msprop:Generator_ColumnPropNameInTable="PhotoColumn" msprop:Generator_UserColumnName="Photo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

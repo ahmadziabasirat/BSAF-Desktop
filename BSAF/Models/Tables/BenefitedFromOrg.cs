@@ -16,7 +16,7 @@ namespace BSAF.Models.Tables
 
         public string ProvinceCode { get; set; }
 
-        public int? DistrictID { get; set; }
+        public string DistrictID { get; set; }
 
         public string Village { get; set; }
 

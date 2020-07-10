@@ -1,0 +1,17 @@
+﻿1>------ Build started: Project: BSAF, Configuration: Debug Any CPU ------
+1>D:\BSAF\cbrr-bsaf-desktop\BSAF\BSAFMDIParent.Designer.cs(221,56,221,60): warning CS0108: 'BSAFMDIParent.Menu' hides inherited member 'Form.Menu'. Use the new keyword if hiding was intended.
+1>D:\BSAF\cbrr-bsaf-desktop\BSAF\Controller\APIController.cs(36,31,36,33): warning CS0168: The variable 'ex' is declared but never used
+1>D:\BSAF\cbrr-bsaf-desktop\BSAF\Controller\ConnectionController.cs(24,30,24,31): warning CS0168: The variable 'e' is declared but never used
+1>D:\BSAF\cbrr-bsaf-desktop\BSAF\LoginForm.cs(51,34,51,36): warning CS0168: The variable 'ex' is declared but never used
+1>D:\BSAF\cbrr-bsaf-desktop\BSAF\LoginForm.cs(22,28,22,42): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+1>D:\BSAF\cbrr-bsaf-desktop\BSAF\Controller\BeneficiaryController.cs(250,34,250,35): warning CS0168: The variable 'e' is declared but never used
+1>D:\BSAF\cbrr-bsaf-desktop\BSAF\Controller\BeneficiaryController.cs(693,34,693,35): warning CS0168: The variable 'e' is declared but never used
+1>  BSAF -> D:\BSAF\cbrr-bsaf-desktop\BSAF\bin\Debug\BSAF.exe
+Building BSAF...
+2>------ Publish started: Project: BSAF, Configuration: Debug Any CPU ------
+Connecting to 'D:\bsaf publish\'...
+Publishing files...
+Publish success.
+D:\bsaf publish\
+========== Build: 1 succeeded, 0 failed, 2 up-to-date, 0 skipped ==========
+========== Publish: 1 succeeded, 0 failed, 0 skipped ==========

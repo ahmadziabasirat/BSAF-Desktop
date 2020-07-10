@@ -10,16 +10,12 @@ using System.Windows.Forms;
 
 namespace BSAF
 {
-    public partial class BSAFMDIParent : Form
+    public partial class BSAFMDIParent :MetroFramework.Forms.MetroForm
     {
-        private int childFormNumber = 0;
-
         public BSAFMDIParent()
         {
             InitializeComponent();
         }
-
-
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
             if (this.Owner != null)
@@ -42,16 +38,19 @@ namespace BSAF
         {
             BeneficiaryForm bForm = new BeneficiaryForm(null)
             {
-                MdiParent = this
+                MdiParent = this,
+              
             };
             bForm.Show();
         }
 
         private void searchBeneficiaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchBeneficiaryForm sForm = new SearchBeneficiaryForm
+            SearchForm sForm
+                = new SearchForm
             {
-                MdiParent = this
+                MdiParent = this,
+             
             };
             sForm.Show();
         }
@@ -76,11 +75,42 @@ namespace BSAF
 
         private void submitRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var ssform = new SubmitToServerForm()
+            var ssform = new SubmitForm()
             {
-                MdiParent = this
+                MdiParent = this,
+              
             };
             ssform.Show();
-    }
+        }
+
+        private void closeAllWindowsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ssform = new OptionsForm()
+            {
+                MdiParent = this,
+               
+            };
+            ssform.Show();
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ssform = new AboutForm()
+            {
+                MdiParent = this,
+               
+            };
+            ssform.Show();
+        }
     }
 }

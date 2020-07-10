@@ -12,8 +12,6 @@ namespace BSAF.Models.Tables
 
         public string ProvinceCode { get; set; }
 
-        public string MapCode { get; set; }
-
         public string EnName { get; set; }
 
         public string DrName { get; set; }

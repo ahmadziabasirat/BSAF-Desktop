@@ -20,22 +20,35 @@ namespace BSAF.Controller
 
         public static bool SubmitBeneficiary(BeneficiaryVM model)
         {
-            string baseUrl = ConfigurationManager.AppSettings["apiBaseUrl"].ToString();
-
-            string endpoint = baseUrl + "/Beneficiary/";
+            string endpoint = Variables.beneficiaryUrl;
             string method = "POST";
             string json = JsonConvert.SerializeObject(model);
-            WebClient wc = new WebClient();
-            wc.Headers["Content-Type"] = "application/json";
             try
             {
-                string response = wc.UploadString(endpoint, method, json);
-                return JsonConvert.DeserializeObject<bool>(response);
-            }
-            catch (Exception e)
+                using (WebClient client = new WebClient())
+                {
+                    client.Headers["Content-Type"] = "application/json";
+                    client.Headers["Authorization"] = "Bearer " + UserInfo.token;
+                    client.Encoding = Encoding.UTF8;
+                    string response = client.UploadString(endpoint, method, json);
+                    return JsonConvert.DeserializeObject<bool>(response);
+                }
+            } catch(Exception ex)
             {
                 return false;
             }
+            //WebClient wc = new WebClient();
+            //wc.Headers["Content-Type"] = "application/json";
+            //wc.Headers["Authorization"] = "Bearer "+UserInfo.token;
+            //try
+            //{
+            //    string response = wc.UploadString(endpoint, method, json);
+            //    return JsonConvert.DeserializeObject<bool>(response);
+            //}
+            //catch (Exception e)
+            //{
+            //    return false;
+            //}
         }
 
     }

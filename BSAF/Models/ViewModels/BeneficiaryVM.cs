@@ -12,7 +12,7 @@ namespace BSAF.Models.ViewModels
     {
         public int BeneficiaryID { get; set; }
 
-        public Guid GUID { get; set; }
+        public string CardID { get; set; }
 
         public DateTime ScreeningDate { get; set; }
 
@@ -28,13 +28,13 @@ namespace BSAF.Models.ViewModels
 
         public string OriginProvince { get; set; }
 
-        public int? OriginDistrict { get; set; }
+        public string OriginDistrict { get; set; }
 
         public string OriginVillage { get; set; }
 
         public string ReturnProvince { get; set; }
 
-        public int? ReturnDistrict { get; set; }
+        public string ReturnDistrict { get; set; }
 
         public string ReturnVillage { get; set; }
 
@@ -167,9 +167,10 @@ namespace BSAF.Models.ViewModels
         public List<MainConcern> MainConcerns { get; set; }
 
         public List<HostCountrySchool> HostCountrySchools { get; set; }
+        public byte[] Photo { get; set; }
 
         public BeneficiaryVM()
-        {
+        { 
             Individuals = new List<IndividualVM>();
             PSNs = new List<PSN>();
             ReturnReasons = new List<ReturnReason>();

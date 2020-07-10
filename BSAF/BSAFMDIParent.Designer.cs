@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSAFMDIParent));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.Menu = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,7 +35,10 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.searchBeneficiaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.closeAllWindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.submitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.submitRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,27 +47,21 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.mdiProgressbar = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
-            this.submitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.submitRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
-            this.mainStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu,
             this.submitToolStripMenuItem,
             this.toolsMenu,
             this.helpMenu});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Location = new System.Drawing.Point(20, 60);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(632, 24);
-            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Size = new System.Drawing.Size(1240, 24);
+            this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "MenuStrip";
             // 
             // Menu
@@ -75,6 +71,7 @@
             this.toolStripSeparator3,
             this.searchBeneficiaryToolStripMenuItem,
             this.toolStripSeparator4,
+            this.closeAllWindowsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.Menu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.Menu.Name = "Menu";
@@ -111,12 +108,34 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(207, 6);
             // 
+            // closeAllWindowsToolStripMenuItem
+            // 
+            this.closeAllWindowsToolStripMenuItem.Name = "closeAllWindowsToolStripMenuItem";
+            this.closeAllWindowsToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.closeAllWindowsToolStripMenuItem.Text = "Close all windows";
+            this.closeAllWindowsToolStripMenuItem.Click += new System.EventHandler(this.closeAllWindowsToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
+            // 
+            // submitToolStripMenuItem
+            // 
+            this.submitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submitRecordToolStripMenuItem});
+            this.submitToolStripMenuItem.Name = "submitToolStripMenuItem";
+            this.submitToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.submitToolStripMenuItem.Text = "Submit";
+            // 
+            // submitRecordToolStripMenuItem
+            // 
+            this.submitRecordToolStripMenuItem.Name = "submitRecordToolStripMenuItem";
+            this.submitRecordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.submitRecordToolStripMenuItem.Text = "Submit Record";
+            this.submitRecordToolStripMenuItem.Click += new System.EventHandler(this.submitRecordToolStripMenuItem_Click);
             // 
             // toolsMenu
             // 
@@ -131,6 +150,7 @@
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.optionsToolStripMenuItem.Text = "&Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // helpMenu
             // 
@@ -176,97 +196,47 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.aboutToolStripMenuItem.Text = "&About ... ...";
-            // 
-            // mdiProgressbar
-            // 
-            this.mdiProgressbar.Name = "mdiProgressbar";
-            this.mdiProgressbar.Size = new System.Drawing.Size(100, 16);
-            this.mdiProgressbar.Visible = false;
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
-            this.toolStripStatusLabel.Text = "Status";
-            // 
-            // mainStatusStrip
-            // 
-            this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel,
-            this.mdiProgressbar});
-            this.mainStatusStrip.Location = new System.Drawing.Point(0, 431);
-            this.mainStatusStrip.Name = "mainStatusStrip";
-            this.mainStatusStrip.Size = new System.Drawing.Size(632, 22);
-            this.mainStatusStrip.TabIndex = 2;
-            this.mainStatusStrip.Text = "StatusStrip";
-            // 
-            // submitToolStripMenuItem
-            // 
-            this.submitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.submitRecordToolStripMenuItem});
-            this.submitToolStripMenuItem.Name = "submitToolStripMenuItem";
-            this.submitToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.submitToolStripMenuItem.Text = "Submit";
-            // 
-            // submitRecordToolStripMenuItem
-            // 
-            this.submitRecordToolStripMenuItem.Name = "submitRecordToolStripMenuItem";
-            this.submitRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.submitRecordToolStripMenuItem.Text = "Submit Record";
-            this.submitRecordToolStripMenuItem.Click += new System.EventHandler(this.submitRecordToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Text = "&About ...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // BSAFMDIParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(632, 453);
-            this.Controls.Add(this.mainStatusStrip);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.menuStrip);
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip;
             this.Name = "BSAFMDIParent";
             this.Text = "Beneficiary Screening and Assistance Application";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MDIParent_FormClosing);
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.BSAFMDIParent_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.mainStatusStrip.ResumeLayout(false);
-            this.mainStatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
         #endregion
 
-
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Menu;
         private System.Windows.Forms.ToolStripMenuItem newBeneficaryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem searchBeneficiaryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem closeAllWindowsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem submitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem submitRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsMenu;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpMenu;
         private System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
-        private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem searchBeneficiaryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripProgressBar mdiProgressbar;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
-        private System.Windows.Forms.StatusStrip mainStatusStrip;
-        private System.Windows.Forms.ToolStripMenuItem submitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem submitRecordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
-
-
-
